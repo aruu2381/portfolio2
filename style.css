@@ -1,0 +1,99 @@
+:root {
+    --primary: #2b59ff;
+    --secondary: #e73c7e;
+    --glass: rgba(255, 255, 255, 0.9);
+}
+
+body {
+    font-family: 'Lexend', sans-serif;
+    margin: 0;
+    /* 4-Color Animated Gradient Background */
+    background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #2b59ff);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
+    min-height: 100vh;
+    color: #fff;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.navbar {
+    background: rgba(0, 0, 0, 0.8) !important;
+    backdrop-filter: blur(10px);
+}
+
+/* Glassmorphism Card Style */
+.glass-container {
+    background: var(--glass);
+    backdrop-filter: blur(15px);
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 40px;
+    color: #333;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+
+.text-gradient {
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    border: none;
+    padding: 12px 30px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(43, 89, 255, 0.4);
+}
+
+.mini-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.85); /* Dark Glass Look */
+    backdrop-filter: blur(8px);
+    color: white;
+    padding: 10px 0;
+    font-size: 14px;
+    z-index: 9999;
+    border-top: 2px solid #2b59ff; /* Blue Electrical Line */
+}
+
+.footer-left span {
+    letter-spacing: 1px;
+}
+
+.resume-mini-btn {
+    background: #2b59ff;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.resume-mini-btn:hover {
+    background: #e73c7e;
+    color: white;
+}
+
+/* Page content ko footer se dabne se bachane ke liye */
+body {
+    padding-bottom: 60px; 
+}
